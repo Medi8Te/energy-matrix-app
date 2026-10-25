@@ -8,6 +8,8 @@ import LichtForm from './components/LichtForm'
 import LastList from './components/LastList'
 import LichtList from './components/LichtList'
 import ScatterMatrix from './components/ScatterMatrix'
+import LichtMatrix from './components/LichtMatrix'
+import Trend from './components/Trend'
 import './App.css'
 
 const QUOTES = [
@@ -146,6 +148,8 @@ export default function App() {
                   />
                 </div>
                 <ScatterMatrix lasten={lasten} />
+                <LichtMatrix lichtbronnen={lichtbronnen} />
+                <Trend lasten={lasten} lichtbronnen={lichtbronnen} />
               </div>
             )}
             {tab === 1 && <LastForm onSave={addLast} />}
