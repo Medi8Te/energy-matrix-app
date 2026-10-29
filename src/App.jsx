@@ -15,12 +15,12 @@ import './App.css'
 const QUOTES = [
   'Wat je aandacht geeft, groeit.',
   'In stilte vind je de antwoorden die lawaai verbergt.',
-  'Elke last die je erkent, verliest een deel van zijn gewicht.',
+  'Elke zorg die je erkent, verliest een deel van haar gewicht.',
   'Jij bent meer dan je zorgen.',
-  'Licht en last bestaan samen — en beide zijn leraar.',
+  'Licht en zorgen bestaan samen — en beide zijn leraar.',
 ]
 
-const TABS = ['🌙 Balans', '🌑 Last', '🙏 Dankbaarheid', '🪷 Overzicht']
+const TABS = ['☀️ Balans', '☁️ Zorgen', '🙏 Dankbaarheid', '🌼 Overzicht']
 
 export default function App() {
   const [session, setSession]           = useState(null)
@@ -115,7 +115,7 @@ export default function App() {
 
       <header className="app-header">
         <h1>Innerlijke Balans</h1>
-        <p className="subtitle">Balans · Lasten · Dankbaarheid</p>
+        <p className="subtitle">Balans · Zorgen · Dankbaarheid</p>
         <p className="header-quote">"{quote}"</p>
       </header>
 

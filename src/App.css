@@ -7,23 +7,24 @@
 }
 
 :root {
-  --bg: #0e0f14;
-  --bg2: #13141c;
-  --surface: #1a1b26;
-  --surface2: #20213080;
-  --border: rgba(180, 160, 220, 0.12);
-  --border-soft: rgba(180, 160, 220, 0.06);
-  --text: #e8e0f0;
-  --text-muted: #9b93b0;
-  --text-faint: #5a5370;
-  --lavender: #b8a9d9;
-  --lavender-bright: #cfc0f0;
-  --rose: #e8a0b4;
-  --sage: #8bbfaa;
-  --gold: #d4b896;
+  color-scheme: light;
+  --bg: #fff8ee;
+  --bg2: #fff1df;
+  --surface: #ffffff;
+  --surface2: #fffaf3;
+  --border: rgba(240, 150, 80, 0.25);
+  --border-soft: rgba(240, 150, 80, 0.14);
+  --text: #3d2c4e;
+  --text-muted: #6e5d7e;
+  --text-faint: #9a8aa6;
+  --lavender: #8b6fd6;
+  --lavender-bright: #6c47d1;
+  --rose: #f0567a;
+  --sage: #2fb67c;
+  --gold: #f2a516;
   --radius: 16px;
   --radius-sm: 10px;
-  --glow: 0 0 40px rgba(180, 160, 220, 0.08);
+  --glow: 0 6px 24px rgba(240, 150, 80, 0.12);
 }
 
 body {
@@ -33,8 +34,10 @@ body {
   font-weight: 300;
   min-height: 100vh;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(100, 80, 160, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(80, 100, 140, 0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 200, 110, 0.45) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 85% 85%, rgba(255, 150, 180, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 10% 70%, rgba(120, 210, 170, 0.18) 0%, transparent 60%);
+  background-attachment: fixed;
 }
 
 .app {
@@ -108,9 +111,9 @@ body {
 }
 
 .tab.active {
-  background: linear-gradient(135deg, rgba(180,160,220,0.25), rgba(220,160,180,0.15));
+  background: linear-gradient(135deg, rgba(110,80,190,0.45), rgba(255,140,90,0.27));
   color: var(--lavender-bright);
-  border: 1px solid rgba(180,160,220,0.2);
+  border: 1px solid rgba(110,80,190,0.36);
   font-weight: 500;
 }
 
@@ -262,7 +265,7 @@ body {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  background: rgba(255,255,255,0.04);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text);
@@ -276,12 +279,12 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: rgba(180,160,220,0.4);
-  background: rgba(180,160,220,0.05);
+  border-color: rgba(110,80,190,0.72);
+  background: rgba(110,80,190,0.09);
 }
 
 .form-group select option {
-  background: #1a1b26;
+  background: #ffffff;
 }
 
 .form-group textarea {
@@ -314,8 +317,8 @@ body {
 }
 
 .score-preview {
-  background: rgba(180,160,220,0.06);
-  border: 1px solid rgba(180,160,220,0.1);
+  background: rgba(110,80,190,0.11);
+  border: 1px solid rgba(110,80,190,0.18);
   border-radius: var(--radius-sm);
   padding: 12px 16px;
   margin-bottom: 20px;
@@ -329,8 +332,8 @@ body {
 }
 
 .gap-warning {
-  background: rgba(212, 184, 150, 0.08);
-  border: 1px solid rgba(212, 184, 150, 0.2);
+  background: rgba(242,165,22,0.14);
+  border: 1px solid rgba(242,165,22,0.36);
   border-radius: var(--radius-sm);
   padding: 10px 14px;
   margin-bottom: 18px;
@@ -342,9 +345,9 @@ body {
 .btn-primary {
   width: 100%;
   padding: 13px;
-  background: linear-gradient(135deg, rgba(180,160,220,0.25), rgba(220,160,180,0.15));
-  color: var(--lavender-bright);
-  border: 1px solid rgba(180,160,220,0.25);
+  background: linear-gradient(135deg, #8b6fd6, #f0567a 60%, #f2a516);
+  color: #ffffff;
+  border: none;
   border-radius: 50px;
   font-size: 0.92rem;
   font-family: 'Inter', sans-serif;
@@ -353,12 +356,12 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 8px;
+  box-shadow: 0 6px 18px rgba(240, 86, 122, 0.25);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, rgba(180,160,220,0.35), rgba(220,160,180,0.25));
-  border-color: rgba(180,160,220,0.4);
-  box-shadow: 0 0 20px rgba(180,160,220,0.15);
+  filter: brightness(1.06);
+  box-shadow: 0 8px 24px rgba(240, 86, 122, 0.35);
 }
 
 /* Lists */
@@ -413,12 +416,12 @@ body {
   letter-spacing: 0.03em;
 }
 
-.badge-stress  { background: rgba(232,160,180,0.08); border-color: rgba(232,160,180,0.2); color: #e8a0b4; }
-.badge-energy  { background: rgba(139,191,170,0.08); border-color: rgba(139,191,170,0.2); color: #8bbfaa; }
-.badge-status  { background: rgba(184,169,217,0.08); border-color: rgba(184,169,217,0.2); color: #b8a9d9; }
-.badge-cat     { background: rgba(212,184,150,0.08); border-color: rgba(212,184,150,0.2); color: #d4b896; }
-.badge-potentiaal { background: rgba(212,184,150,0.1); border-color: rgba(212,184,150,0.25); color: #d4b896; }
-.badge-actieplan  { background: rgba(139,191,170,0.07); border-color: rgba(139,191,170,0.15); color: #8bbfaa; }
+.badge-stress  { background: rgba(240,86,122,0.14); border-color: rgba(240,86,122,0.36); color: #f0567a; }
+.badge-energy  { background: rgba(47,182,124,0.14); border-color: rgba(47,182,124,0.36); color: #2fb67c; }
+.badge-status  { background: rgba(139,111,214,0.14); border-color: rgba(139,111,214,0.36); color: #8b6fd6; }
+.badge-cat     { background: rgba(242,165,22,0.14); border-color: rgba(242,165,22,0.36); color: #f2a516; }
+.badge-potentiaal { background: rgba(242,165,22,0.18); border-color: rgba(242,165,22,0.45); color: #f2a516; }
+.badge-actieplan  { background: rgba(47,182,124,0.13); border-color: rgba(47,182,124,0.27); color: #2fb67c; }
 
 .item-actieplan {
   font-size: 0.8rem;
@@ -431,7 +434,7 @@ body {
 .status-select {
   font-size: 0.75rem;
   padding: 4px 8px;
-  background: rgba(255,255,255,0.04);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text-muted);
@@ -439,7 +442,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-.status-select option { background: #1a1b26; }
+.status-select option { background: #ffffff; }
 
 .delete-btn {
   background: none;
@@ -546,7 +549,7 @@ body {
 
 .auth-group input {
   width: 100%;
-  background: rgba(255,255,255,0.04);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text);
@@ -559,7 +562,7 @@ body {
 
 .auth-group input:focus {
   outline: none;
-  border-color: rgba(180,160,220,0.4);
+  border-color: rgba(110,80,190,0.72);
 }
 
 .auth-error {

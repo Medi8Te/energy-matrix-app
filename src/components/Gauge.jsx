@@ -23,7 +23,7 @@ export default function Gauge({ value, min = -40, max = 40 }) {
   const valueAngle = startAngle + pct * totalDeg
 
   // Soft gradient colors depending on balance
-  const color = value < -10 ? '#e8a0b4' : value < 5 ? '#d4b896' : '#8bbfaa'
+  const color = value < -10 ? '#f0567a' : value < 5 ? '#f2a516' : '#2fb67c'
   const needleEnd = polarToXY(valueAngle, 68)
 
   const label = value > 10 ? 'In harmonie' : value > 0 ? 'Licht overwicht' : value > -10 ? 'Zoekend evenwicht' : 'Nood aan rust'
@@ -33,7 +33,7 @@ export default function Gauge({ value, min = -40, max = 40 }) {
       <div className="gauge-title">Innerlijke Balans</div>
       <svg viewBox="0 0 240 155" width="230" height="148">
         {/* Track */}
-        <path d={describeArc(startAngle, endAngle, r)} fill="none" stroke="rgba(180,160,220,0.1)" strokeWidth="14" strokeLinecap="round" />
+        <path d={describeArc(startAngle, endAngle, r)} fill="none" stroke="rgba(110,80,190,0.18)" strokeWidth="14" strokeLinecap="round" />
         {/* Value arc */}
         <path d={describeArc(startAngle, valueAngle, r)} fill="none" stroke={color} strokeWidth="14" strokeLinecap="round" opacity="0.85" />
         {/* Subtle glow on arc */}
@@ -47,8 +47,8 @@ export default function Gauge({ value, min = -40, max = 40 }) {
           const labelPos = polarToXY(a, r - 24)
           return (
             <g key={tick}>
-              <line x1={inner.x} y1={inner.y} x2={outer.x} y2={outer.y} stroke="rgba(180,160,220,0.25)" strokeWidth="1" />
-              <text x={labelPos.x} y={labelPos.y} fill="rgba(180,160,220,0.35)" fontSize="9" textAnchor="middle" dominantBaseline="middle">{tick}</text>
+              <line x1={inner.x} y1={inner.y} x2={outer.x} y2={outer.y} stroke="rgba(110,80,190,0.45)" strokeWidth="1" />
+              <text x={labelPos.x} y={labelPos.y} fill="rgba(110,80,190,0.63)" fontSize="9" textAnchor="middle" dominantBaseline="middle">{tick}</text>
             </g>
           )
         })}

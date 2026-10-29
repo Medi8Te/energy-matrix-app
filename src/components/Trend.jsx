@@ -27,7 +27,7 @@ export default function Trend({ lasten, lichtbronnen }) {
 
   return (
     <div className="card">
-      <h3 style={{ marginBottom: 16, fontSize: '0.72rem', color: 'rgba(180,160,220,0.4)', textTransform: 'uppercase', letterSpacing: '0.12em', fontFamily: 'Inter, sans-serif' }}>
+      <h3 style={{ marginBottom: 16, fontSize: '0.72rem', color: 'rgba(110,80,190,0.72)', textTransform: 'uppercase', letterSpacing: '0.12em', fontFamily: 'Inter, sans-serif' }}>
         Verloop — netto balans over tijd
       </h3>
       {data.length < 2 ? (
@@ -35,17 +35,17 @@ export default function Trend({ lasten, lichtbronnen }) {
       ) : (
         <ResponsiveContainer width="100%" height={220}>
           <LineChart data={data} margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(180,160,220,0.07)" />
-            <XAxis dataKey="dag" stroke="rgba(180,160,220,0.2)" tick={{ fill: 'rgba(180,160,220,0.3)', fontSize: 11 }} />
-            <YAxis stroke="rgba(180,160,220,0.2)" tick={{ fill: 'rgba(180,160,220,0.3)', fontSize: 11 }} />
-            <ReferenceLine y={0} stroke="rgba(180,160,220,0.2)" />
-            <Tooltip contentStyle={{ background: '#1a1b26', border: '1px solid rgba(180,160,220,0.2)', borderRadius: 10, fontSize: 13 }} />
-            <Line type="monotone" dataKey="netto" name="Netto" stroke="#b8a9d9" strokeWidth={2} dot={{ r: 3 }} />
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(110,80,190,0.13)" />
+            <XAxis dataKey="dag" stroke="rgba(110,80,190,0.36)" tick={{ fill: 'rgba(110,80,190,0.54)', fontSize: 11 }} />
+            <YAxis stroke="rgba(110,80,190,0.36)" tick={{ fill: 'rgba(110,80,190,0.54)', fontSize: 11 }} />
+            <ReferenceLine y={0} stroke="rgba(110,80,190,0.36)" />
+            <Tooltip contentStyle={{ background: '#ffffff', border: '1px solid rgba(110,80,190,0.36)', borderRadius: 10, fontSize: 13 }} />
+            <Line type="monotone" dataKey="netto" name="Netto" stroke="#8b6fd6" strokeWidth={2} dot={{ r: 3 }} />
           </LineChart>
         </ResponsiveContainer>
       )}
-      <div style={{ fontSize: 11, color: 'rgba(180,160,220,0.35)', marginTop: 8 }}>
-        Telt toegevoegde lichtbronnen en lasten per dag op. Wijzigingen van status worden niet teruggerekend.
+      <div style={{ fontSize: 11, color: 'rgba(110,80,190,0.63)', marginTop: 8 }}>
+        Telt toegevoegde lichtbronnen en zorgen per dag op. Wijzigingen van status worden niet teruggerekend.
       </div>
     </div>
   )

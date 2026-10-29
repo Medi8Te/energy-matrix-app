@@ -2,7 +2,9 @@
 
 ## Doel
 Persoonlijke app die lichtbronnen (dingen die energie geven) en lasten (zorgen) in balans brengt.
-Tabs: Balans (gauge, statistieken, lastenkaart, lichtkaart, verloop), Last, Dankbaarheid (lichtbronnen), Overzicht.
+Tabs: Balans (gauge, statistieken, zorgenkaart, lichtkaart, verloop), Zorgen, Dankbaarheid (lichtbronnen), Overzicht.
+In de UI heten lasten "zorgen"; in database en code blijft de naam `lasten`.
+Thema: licht en zonnig (crème achtergrond, witte kaarten, violet/koraal/goud/groen als accent).
 
 ## Stack
 - React 19 + Vite, Recharts 3

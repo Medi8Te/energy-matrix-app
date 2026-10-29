@@ -3,14 +3,14 @@ const STATUS_OPTIONS = ['aanwezig', 'in beweging', 'omarmd', 'losgelaten']
 export default function LastList({ lasten, onStatusChange, onDelete }) {
   if (lasten.length === 0) return (
     <div className="list-section">
-      <h2>Lasten</h2>
-      <div className="empty-state">Nog geen lasten vastgelegd.</div>
+      <h2>Zorgen</h2>
+      <div className="empty-state">Nog geen zorgen vastgelegd.</div>
     </div>
   )
 
   return (
     <div className="list-section">
-      <h2>Lasten ({lasten.length})</h2>
+      <h2>Zorgen ({lasten.length})</h2>
       <div className="list-items">
         {lasten.map(l => (
           <div key={l.id} className="list-item" style={{ opacity: l.status === 'losgelaten' ? 0.45 : 1 }}>

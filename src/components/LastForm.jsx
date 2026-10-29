@@ -22,16 +22,16 @@ export default function LastForm({ onSave }) {
   }
 
   const gewicht = Math.round((form.waarschijnlijkheid * form.impact * (10 - form.controleerbaarheid)) / 10)
-  const gewichtColor = gewicht > 50 ? '#e8a0b4' : gewicht > 25 ? '#d4b896' : '#8bbfaa'
+  const gewichtColor = gewicht > 50 ? '#f0567a' : gewicht > 25 ? '#f2a516' : '#2fb67c'
 
   return (
     <form className="form-card" onSubmit={submit}>
-      <h2>🌑 Een last vastleggen</h2>
+      <h2>☁️ Een zorg vastleggen</h2>
       <p className="form-intro">Wat draag je op dit moment met je mee? Erkenning is de eerste stap naar verlichting.</p>
 
       <div className="form-group">
         <label>Wat precies?</label>
-        <textarea value={form.omschrijving} onChange={e => set('omschrijving', e.target.value)} placeholder="Beschrijf de last in je eigen woorden..." required />
+        <textarea value={form.omschrijving} onChange={e => set('omschrijving', e.target.value)} placeholder="Beschrijf de zorg in je eigen woorden..." required />
       </div>
 
       <div className="form-group">
@@ -74,9 +74,9 @@ export default function LastForm({ onSave }) {
       </div>
 
       <div className="score-preview">
-        <span style={{ color: 'rgba(180,160,220,0.5)' }}>Gewicht: </span>
+        <span style={{ color: 'rgba(110,80,190,0.9)' }}>Gewicht: </span>
         <strong style={{ color: gewichtColor }}>{gewicht}</strong>
-        <span style={{ color: 'rgba(180,160,220,0.3)', fontSize: 11, marginLeft: 10 }}>kans × impact × (10 − invloed) / 10</span>
+        <span style={{ color: 'rgba(110,80,190,0.54)', fontSize: 11, marginLeft: 10 }}>kans × impact × (10 − invloed) / 10</span>
       </div>
 
       <button type="submit" className="btn-primary">Vastleggen</button>

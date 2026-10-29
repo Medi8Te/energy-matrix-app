@@ -4,7 +4,7 @@ import { supabase } from '../supabase'
 const QUOTES = [
   'De reis naar binnen begint met één stap.',
   'In stilte vind je de antwoorden die lawaai verbergt.',
-  'Elke last die je erkent, verliest een deel van zijn gewicht.',
+  'Elke zorg die je erkent, verliest een deel van haar gewicht.',
 ]
 
 export default function Auth() {
